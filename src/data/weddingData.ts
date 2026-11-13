@@ -4,6 +4,12 @@
  * Purely stylish aesthetics, architectural majesty, and floral elegance (no human portraits).
  */
 
+import heroRoyal from '../assets/images/hero_royal_palace_floral_1794486227680.jpg';
+import weddingRings from '../assets/images/wedding_rings_gold_silk_1794486229296.jpg';
+import marbleArches from '../assets/images/palatial_marble_arches_1794486228970.jpg';
+import venueGarden from '../assets/images/venue_garden_hall_1794485248675.jpg';
+import banquetTable from '../assets/images/banquet_table_chandelier_1794486228852.jpg';
+
 export interface WeddingEvent {
   id: string;
   name: string;
@@ -79,7 +85,7 @@ export const weddingData = {
   },
 
   // Hero Photography (Pure Architectural Royal Stage with Floral Arch & Chandeliers)
-  heroImage: "/src/assets/images/hero_royal_palace_floral_1794486227680.jpg",
+  heroImage: heroRoyal,
 
   // Love Story Stages
   loveStory: [
@@ -90,7 +96,7 @@ export const weddingData = {
       description:
         "A connection guided by divine timing and family harmony. What started as kindred conversation unfolded into deep mutual respect and shared dreams.",
       quote: "And We created you in pairs — Surah An-Naba [78:8]",
-      image: "/src/assets/images/wedding_rings_gold_silk_1794486229296.jpg",
+      image: weddingRings,
     },
     {
       stage: "Chapter II",
@@ -99,7 +105,7 @@ export const weddingData = {
       description:
         "Surrounded by prayer and joyful families, hearts aligned with shared intentions for a life of compassion, patience, and unyielding support.",
       quote: "Love is not about looking at each other, but looking in the same direction.",
-      image: "/src/assets/images/palatial_marble_arches_1794486228970.jpg",
+      image: marbleArches,
     },
     {
       stage: "Chapter III",
@@ -108,7 +114,7 @@ export const weddingData = {
       description:
         "The momentous day we solemnize our bond before Allah and our beloved guests, embarking upon a lifetime of shared companionship and joy.",
       quote: "Two hearts united in faith, devotion, and endless gratitude.",
-      image: "/src/assets/images/hero_royal_palace_floral_1794486227680.jpg",
+      image: heroRoyal,
     },
   ] as StoryMilestone[],
 
@@ -169,7 +175,7 @@ export const weddingData = {
     cityState: "Multan, Punjab, Pakistan",
     description:
       "A renowned wedding banquet hall in Multan offering royal hospitality, majestic lighting, and gracious facilities for an unforgettable celebration.",
-    image: "/src/assets/images/venue_garden_hall_1794485248675.jpg",
+    image: venueGarden,
     googleMapsUrl: "https://maps.app.goo.gl/8k2tLtCpQckaJWTa9?g_st=iw",
     phone: "Chungi # 9, Multan",
     parkingNote: "Ample parking available at the venue entrance along Eid Gah Road.",
@@ -181,42 +187,42 @@ export const weddingData = {
       id: 1,
       title: "The Royal Stage",
       subtitle: "Floral Archway & Grand Ballroom",
-      src: "/src/assets/images/hero_royal_palace_floral_1794486227680.jpg",
+      src: heroRoyal,
       aspect: "landscape",
     },
     {
       id: 2,
       title: "Sacred Bands",
       subtitle: "Gold Wedding Rings on Silk",
-      src: "/src/assets/images/wedding_rings_gold_silk_1794486229296.jpg",
+      src: weddingRings,
       aspect: "portrait",
     },
     {
       id: 3,
       title: "Imperial Arches",
       subtitle: "Islamic Marble Palace Architecture",
-      src: "/src/assets/images/palatial_marble_arches_1794486228970.jpg",
+      src: marbleArches,
       aspect: "portrait",
     },
     {
       id: 4,
       title: "Grand Banquet Assembly",
       subtitle: "Crystal Candelabras & Gold Chargers",
-      src: "/src/assets/images/banquet_table_chandelier_1794486228852.jpg",
+      src: banquetTable,
       aspect: "landscape",
     },
     {
       id: 5,
       title: "Palace at Twilight",
       subtitle: "Historic Illuminated Courtyard",
-      src: "/src/assets/images/venue_garden_hall_1794485248675.jpg",
+      src: venueGarden,
       aspect: "landscape",
     },
     {
       id: 6,
       title: "Golden Symphony",
       subtitle: "Opulent Banquet Ambience",
-      src: "/src/assets/images/banquet_table_chandelier_1794486228852.jpg",
+      src: banquetTable,
       aspect: "landscape",
     },
   ] as GalleryItem[],
