@@ -76,12 +76,6 @@ export const AdminPanel: React.FC<AdminPanelProps> = ({
     }
   }, [isOpen]);
 
-  // Admin access stays disabled until real server-side authentication is configured.
-  const handlePinSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    setPinError(true);
-  };
-
   // Generate unique slug
   const generateSlug = (name: string): string => {
     return (
