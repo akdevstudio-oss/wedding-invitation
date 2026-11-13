@@ -666,29 +666,6 @@ export const RoyalInvitationCard: React.FC<RoyalInvitationCardProps> = ({
           </div>
         ) : (
           <form onSubmit={handleRsvpSubmit} className="space-y-4">
-            {/* Quick Guest Selector if user hasn't opened via link */}
-            {!currentGuest && allGuests.length > 0 && (
-              <div className="p-3 bg-[#F8F5EE] border border-[#D8C7AA] rounded-xs text-xs font-serif">
-                <label className="block text-[#8D8174] uppercase tracking-wider text-[10px] mb-1">
-                  Optional: Select your invited family to unlock your reserved seats
-                </label>
-                <select
-                  onChange={(e) => {
-                    const match = allGuests.find((g) => g.id === e.target.value);
-                    if (match) setCurrentGuest(match);
-                  }}
-                  className="w-full px-2.5 py-1.5 bg-[#FDFBF7] border border-[#D8C7AA] rounded-xs text-xs font-serif text-[#44382F]"
-                >
-                  <option value="">-- Choose Name from Guest List --</option>
-                  {allGuests.map((g) => (
-                    <option key={g.id} value={g.id}>
-                      {g.name} ({g.isWithFamily ? 'With Family' : `${g.allowedSeats} Afrad`})
-                    </option>
-                  ))}
-                </select>
-              </div>
-            )}
-
             <div>
               <label className="block text-xs font-serif uppercase tracking-widest text-[#44382F] mb-1.5">
                 Your Full Name <span className="text-[#B69A68]">*</span>
