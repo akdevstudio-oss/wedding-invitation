@@ -1,0 +1,7 @@
+{
+  "name": "Elysian Vows - Luxury Wedding Invitation",
+  "description": "An extraordinary, cinematic luxury wedding invitation website with interactive envelope opening, curtain reveals, and royal editorial aesthetics.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
+

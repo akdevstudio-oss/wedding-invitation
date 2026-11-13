@@ -1,0 +1,153 @@
+/* Custom Animations for Luxury Wedding Invitation */
+
+@keyframes floatSlow {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-8px) rotate(1.5deg);
+  }
+}
+
+@keyframes goldShimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+@keyframes pulseGlow {
+  0%, 100% {
+    box-shadow: 0 0 20px rgba(182, 154, 104, 0.2), 0 0 40px rgba(182, 154, 104, 0.1);
+  }
+  50% {
+    box-shadow: 0 0 35px rgba(182, 154, 104, 0.4), 0 0 60px rgba(182, 154, 104, 0.2);
+  }
+}
+
+@keyframes waxBreak {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.15) rotate(4deg);
+    filter: brightness(1.2);
+  }
+  100% {
+    transform: scale(0.85);
+    opacity: 0;
+  }
+}
+
+@keyframes cardRise {
+  0% {
+    transform: translateY(0%) scale(0.92);
+    opacity: 0;
+  }
+  40% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-45%) scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes curtainLeftSweep {
+  0% {
+    transform: translateX(0) skewX(0);
+  }
+  100% {
+    transform: translateX(-102%) skewX(-2deg);
+  }
+}
+
+@keyframes curtainRightSweep {
+  0% {
+    transform: translateX(0) skewX(0);
+  }
+  100% {
+    transform: translateX(102%) skewX(2deg);
+  }
+}
+
+.animate-float-slow {
+  animation: floatSlow 6s ease-in-out infinite;
+}
+
+.animate-gold-shimmer {
+  background: linear-gradient(90deg, transparent 0%, rgba(216, 199, 170, 0.5) 50%, transparent 100%);
+  background-size: 200% 100%;
+  animation: goldShimmer 3s infinite linear;
+}
+
+.envelope-preserve-3d {
+  transform-style: preserve-3d;
+  perspective: 1200px;
+}
+
+.backface-hidden {
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}
+
+/* Paper grain texture emulation */
+.paper-texture {
+  background-color: #F8F5EE;
+  background-image: radial-gradient(#D8C7AA 0.75px, transparent 0.75px), radial-gradient(#B69A68 0.5px, #F8F5EE 0.5px);
+  background-size: 24px 24px;
+  background-position: 0 0, 12px 12px;
+}
+
+/* Luxury Gold Text Gradient */
+.text-gold-gradient {
+  background: linear-gradient(135deg, #8D8174 0%, #B69A68 35%, #D8C7AA 60%, #8D8174 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.border-gold-subtle {
+  border-color: rgba(182, 154, 104, 0.35);
+}
+
+/* Realistic Curtain Fabric Pleats */
+.curtain-fabric-left {
+  background: repeating-linear-gradient(
+    90deg,
+    #E8DFC8 0px,
+    #D8C7AA 28px,
+    #C2B092 56px,
+    #D8C7AA 84px,
+    #EDE7D8 112px
+  );
+  box-shadow: inset -25px 0 50px rgba(68, 56, 47, 0.35);
+}
+
+.curtain-fabric-right {
+  background: repeating-linear-gradient(
+    90deg,
+    #EDE7D8 0px,
+    #D8C7AA 28px,
+    #C2B092 56px,
+    #D8C7AA 84px,
+    #E8DFC8 112px
+  );
+  box-shadow: inset 25px 0 50px rgba(68, 56, 47, 0.35);
+}
+
+@keyframes goldGlowSlow {
+  0%, 100% {
+    box-shadow: 0 0 15px rgba(182, 154, 104, 0.15), 0 0 30px rgba(216, 199, 170, 0.1);
+  }
+  50% {
+    box-shadow: 0 0 25px rgba(182, 154, 104, 0.35), 0 0 45px rgba(216, 199, 170, 0.25);
+  }
+}
+
+.animate-gold-glow {
+  animation: goldGlowSlow 4s ease-in-out infinite;
+}
+
