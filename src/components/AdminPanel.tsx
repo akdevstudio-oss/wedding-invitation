@@ -44,8 +44,6 @@ export const AdminPanel: React.FC<AdminPanelProps> = ({
   onSelectActiveGuest,
 }) => {
   const [isAuthenticated, setIsAuthenticated] = useState(false);
-  const [pinInput, setPinInput] = useState('');
-  const [pinError, setPinError] = useState(false);
   const [activeTab, setActiveTab] = useState<'guests' | 'settings'>('guests');
 
   // Guests state
@@ -78,20 +76,10 @@ export const AdminPanel: React.FC<AdminPanelProps> = ({
     }
   }, [isOpen]);
 
-  // Handle PIN authentication (Default PIN: 2026)
+  // Admin access stays disabled until real server-side authentication is configured.
   const handlePinSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    if (pinInput === '2026' || pinInput.trim() === 'admin') {
-      setIsAuthenticated(true);
-      setPinError(false);
-    } else {
-      setPinError(true);
-    }
-  };
-
-  const handleQuickUnlock = () => {
-    setIsAuthenticated(true);
-    setPinError(false);
+    setPinError(true);
   };
 
   // Generate unique slug
@@ -365,38 +353,11 @@ export const AdminPanel: React.FC<AdminPanelProps> = ({
               Enter host PIN to generate invitation links, allocate seats, and manage guest responses.
             </p>
 
-            <form onSubmit={handlePinSubmit} className="w-full max-w-xs space-y-3">
-              <input
-                type="password"
-                maxLength={8}
-                value={pinInput}
-                onChange={(e) => setPinInput(e.target.value)}
-                placeholder="Enter PIN (Default: 2026)"
-                className="w-full px-4 py-3 bg-[#F8F5EE] border border-[#D8C7AA] rounded-xs text-center font-mono text-lg tracking-widest text-[#44382F] focus:outline-hidden focus:border-[#B69A68]"
-                autoFocus
-              />
-
-              {pinError && (
-                <p className="text-xs text-red-600 font-sans">
-                  Invalid PIN. Default PIN is 2026.
-                </p>
-              )}
-
-              <button
-                type="submit"
-                className="w-full py-3 px-4 rounded-xs bg-[#44382F] hover:bg-[#B69A68] text-[#FDFBF7] font-serif text-xs uppercase tracking-widest transition-colors shadow-xs cursor-pointer"
-              >
-                Unlock Dashboard
-              </button>
-
-              <button
-                type="button"
-                onClick={handleQuickUnlock}
-                className="text-[11px] font-sans text-[#8D8174] hover:text-[#44382F] underline underline-offset-4 pt-1 cursor-pointer block mx-auto"
-              >
-                1-Click Quick Demo Unlock (PIN: 2026)
-              </button>
-            </form>
+            <div className="w-full max-w-sm rounded-sm border border-[#D8C7AA] bg-[#F8F5EE] p-4">
+              <p className="text-sm font-serif text-[#44382F]">
+                Admin access is temporarily disabled for security. Guest management will be restored after secure server-side login is connected.
+              </p>
+            </div>
           </div>
         ) : (
           /* ================= MAIN DASHBOARD ================= */
